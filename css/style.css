@@ -1,0 +1,910 @@
+/*****Scrollup*****/
+.scrolltop-holder .scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: none;
+    z-index: 2;
+    opacity: .8;
+}
+.scrolltop-holder .scrollup:before {
+  content: "";
+  padding: 10px;
+  float: left;
+  width: 40px;
+  height: 40px;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: #000000;
+  background: url(../images/arrow-down2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  transform: rotate(180deg);
+}
+
+/*****NAVIGATION*****/
+header nav {
+  padding: 10px 0;
+  background-color: transparent;
+  transition: ease 0.5s;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+.navbar .navbar-collapse { text-align: center; }
+.navbar .navbar-collapse ul {
+  position: relative;
+  left: 5px;
+  top: 145px;
+}
+.navbar .navbar-collapse li {
+  position: relative;
+  width: 150px;
+}
+.navbar .navbar-collapse li a {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Ek Mukta', sans-serif;
+  color: #ffffff;
+  transition: all .8s ease;
+}
+.navbar .navbar-collapse li .select-section.active {
+  font-weight: 400;
+  color: #f1c40f;
+}
+.navbar .navbar-collapse li a:hover {
+  background-color: transparent;
+  color: #f1c40f;
+}
+.navbar .navbar-collapse li a:focus { background-color: transparent; }
+
+/*****SIDE NAV*****/
+@media (min-width: 320px) and (max-width: 767px){
+  header nav .navbar-header { padding: 10px 50px; }
+  header nav .navbar-header .brand-holder {
+    position: absolute;
+    top: -3px;
+    width: 100%;
+
+  }
+
+  header nav .navbar-header .brand-holder a {
+    text-decoration: none;
+    width: 100%;
+
+  }
+  header nav .navbar-header .brand-holder h3 {
+    padding-left: -10px;
+    font-size: 30px;
+    font-weight: 300;
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    float: left;
+    color: #ffffff;
+  }
+  header nav .navbar-header .brand-holder h3::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 3px;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+  }
+  header nav .navbar-header .sideNav-btn {
+    background: none;
+    border: none;
+    z-index: 999;
+
+  }
+  header nav .navbar-header .sideNav-btn:focus { outline: 0; }
+  header nav .navbar-header .sideNav-btn .hamburger-box {
+    position: relative;
+    z-index: 999;
+    float: right;
+  }
+  header nav .navbar-header .hamburger {
+    position: relative;
+    right: 10px;
+    padding: 0;
+  }
+  header nav .navbar-header .sideNav-btn .hamburger-box .hamburger-inner,
+  header nav .navbar-header .sideNav-btn .hamburger-box .hamburger-inner:before,
+  header nav .navbar-header .sideNav-btn .hamburger-box .hamburger-inner:after { background-color: #ffffff; }
+}
+header nav .sidenav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 100px;
+  width: 0;
+  height: 100%;
+  text-align: center;
+  background: #070707;
+  overflow-x: hidden;
+  transition: .6s;
+  z-index: 2;
+}
+header nav .sidenav.show { width: 100%; }
+header nav .sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 200;
+  font-family: 'Ek Mukta', sans-serif;
+  color: #ffffff;
+  display: block;
+  transition: all .4s ease-in-out;
+}
+header nav .sidenav a:active2 {
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  color: #f1c40f;
+}
+header nav .sidenav a:hover {
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  color: #f1c40f;
+}
+/*****HOME*****/
+.home {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(../images/GO-BEYOND-THEM.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.home .welcome-title {
+  margin-top: 200px;
+  width: 100%;
+}
+.home .welcome-title .bigtext-holder {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 600px;
+  border: 8px solid;
+  border-color: #ffffff;
+}
+.home .welcome-title h1 {
+  font-family: "Open Sans";
+  font-size: 100px;
+  color: #ffffff;
+}
+.home .welcome-title p {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Ek Mukta', sans-serif;
+  color: #ffffff;
+}
+.home .next-btn-holder {
+  text-align: center;
+  padding-top: 210px;
+}
+.home .next-btn-holder a:before {
+  content: "";
+  padding: 10px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: #ffffff;
+  background: url(../images/arrow-down.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+.home .next-btn-holder a {
+  display: inline-block;
+  transition: all .5s ease-in-out;
+}
+.home .next-btn-holder a:hover {
+  padding-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .home {
+    background: url("../images/mob.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-right: 2px;
+  }
+  .home .welcome-title .bigtext-holder {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+    border: 8px solid;
+    border-color: #ffffff;
+  }
+  .home .welcome-title h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 80px;
+    color: #ffffff;
+  }
+}
+/*****ABOUT ME*****/
+.about-me {
+  background-color: #ffffff;
+}
+h3.visible-xs {
+  /*padding: 80px 0 0;*/
+  text-align: center;
+  font-size: 60px;
+      font-weight: 200;
+    letter-spacing: .3cm;
+  font-family: 'Ek Mukta', sans-serif;
+  text-transform: uppercase;
+}
+.about-me .avatar-holder {
+  position: relative;
+  display: flex;
+  left: 25px;
+  margin-top: 120px;
+  align-items: center;
+  justify-content: center;
+}
+.about-me .avatar-holder .imgs {
+  margin-right: 50px;
+  opacity: 0;
+}
+.about-me .avatar-holder .img-1 {
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 50%;
+  order: 2;
+}
+.about-me .avatar-holder .img-1 img {
+  position: relative;
+  top: -50px;
+  width: 100%;
+}
+.about-me .avatar-holder .img-2 {
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.about-me .avatar-holder .img-2:nth-child(1) { order: 1; }
+.about-me .avatar-holder .img-2:nth-child(2) { order: 3; }
+.about-me .avatar-holder .img-2 img {
+  position: relative;
+  left: -20px;
+  width: 200%;
+}
+.about-me .text-holder p {
+  text-align: center;
+  padding: 50px 100px;
+  font-size: 25px;
+  font-weight: 200;
+  font-family: 'Ek Mukta', sans-serif;
+}
+.about-me .text-holder p strong { font-weight: 700; }
+.about-me .skill-holder { padding: 0 100px; }
+.about-me .skill-holder .skill {
+  /*margin-right: 60px;*/
+  margin-left: 60px;
+  margin-bottom: 25px;
+  float: left;
+}
+.about-me .skill-holder .skill h4 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Ek Mukta', sans-serif;
+  margin-bottom: 7px;
+}
+.about-me .skill-holder .skill .progressBarContainer {
+  width: 350px;
+  height: 5px;
+  background: #bdc3c7;
+  overflow: hidden;
+}
+.about-me .skill-holder .skill .progressBarContainer .progressBarValue {
+  height: 5px;
+  float: left;
+  background: #424242;
+}
+.about-me .quote-holder {
+  text-align: center;
+  display: inline-block;
+  padding: 20px 200px 100px;
+}
+.about-me .quote-holder p {
+  font-size: 35px;
+  font-weight: 100;
+  font-family: 'Ek Mukta', sans-serif;
+}
+.about-me .quote-holder p::before {
+  content: "";
+  position: relative;
+  top: -5px;
+  right: -10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/quotes.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  transform: rotate(180deg);
+}
+.about-me .quote-holder p::after {
+  content: "";
+  position: relative;
+  top: -10px;
+  right: 5px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/quotes.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.about-me .quote-holder span {
+  font-size: 28px;
+  font-weight: 100;
+  font-family: 'Ek Mukta', sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+
+  @media screen and (max-width: 480px){
+    .about-me h3.visible-xs{ 
+      font-size: 40px; 
+      padding: 10px 10px;
+      text-align: center;
+      letter-spacing: 10px;
+      font-weight: 200;
+      color: #141414;
+
+
+    }
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-me .text-holder p { padding: 50px 20px; }
+  .about-me .skill-holder { padding: 0; }
+  .about-me .skill-holder .skill {
+    margin-right: 120px;
+    margin-left: -15px;
+    margin-bottom: 25px;
+    float: right;
+  }
+  .about-me .skill-holder .skill .progressBarContainer { width: 300px; }
+  .about-me .quote-holder { padding: 20px 120px 100px; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-me .avatar-holder { left: 15px; }
+  .about-me .avatar-holder .img-1 { height: 250px; }
+  .about-me .avatar-holder .img-2 { height: 150px; }
+  .about-me .text-holder p {
+    padding: 50px 20px;
+  }
+  .about-me .skill-holder { padding: 0; }
+  .about-me .skill-holder .skill {
+    margin-right: 45px;
+    margin-left: 5px;
+    margin-bottom: 25px;
+    float: right;
+  }
+  .about-me .skill-holder .skill .progressBarContainer { width: 290px; }
+  .about-me .quote-holder { padding: 20px 25px 100px; }
+  .about-me .quote-holder p {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Ek Mukta', sans-serif;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-me .avatar-holder {
+    left: 15px;
+    margin-top: 30px;
+  }
+  .about-me .avatar-holder .imgs { margin-right: 20px; }
+  .about-me .avatar-holder .img-1 img {
+    top: -35px;
+  }
+  .about-me .avatar-holder .img-1 {
+    height: 180px;
+    width: 180px;
+  }
+  .about-me .avatar-holder .img-2 {
+    height: 100px;
+    width: 100px;
+  }
+  .about-me .text-holder p {
+    text-align: justify;
+    padding: 50px 25px;
+    font-size: 20px;
+  }
+  .about-me .skill-holder {
+    padding: 0 20px;
+  }
+  .about-me .skill-holder .skill {
+    margin-bottom: 50px;
+    float: none;
+  }
+  .about-me .skill-holder .skill .progressBarContainer { width: 100%; }
+  .about-me .quote-holder { padding: 20px 50px 100px; }
+  .about-me .quote-holder p {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Ek Mukta', sans-serif;
+  }
+  @media screen and (max-width: 480px){
+    .about-me .avatar-holder { left: 15px; }
+    .about-me .avatar-holder .imgs { margin-right: 0; }
+    .about-me .avatar-holder .img-1 img {
+      top: -50px;
+    }
+    .about-me .avatar-holder .img-1 {
+      height: 200px;
+      width: 200px;
+    }
+    .about-me .avatar-holder .img-2 {
+      display: none;
+    }
+    .about-me .text-holder p {
+      text-align: justify;
+      padding: 30px 0;
+      font-size: 18px;
+    }
+    .about-me .skill-holder {
+      padding: 0;
+    }
+    .about-me .skill-holder .skill {
+      margin-right: auto;
+      margin-left: auto;;
+      margin-bottom: 20px;
+      float: none;
+    }
+    .about-me .skill-holder .skill .progressBarContainer { width: 100%; }
+    .about-me .quote-holder { padding: 20px 0 100px; }
+    .about-me .quote-holder p {
+      text-align: justify;
+      font-size: 25px;
+      font-weight: 100;
+      font-family: 'Ek Mukta', sans-serif;
+    }
+	}
+}
+
+/*****Eduction*****/
+.portfolio {
+  background-color:;
+  text-align: center;
+  font-weight: 200;
+  font-family: 'Ek Mukta', sans-serif;
+  height: 16cm;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.portfolio .work-holder .my-work .visible-lg{
+  text-align: center;
+  font-size: 60px;
+  padding: 10px 20px;
+  margin-top: 1cm;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 2cm;
+  font-weight: 200;
+  color: #141414;
+}
+
+.portfolio .work-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 100px 0 100px 0;
+  margin-top: -2.5cm;
+  color: rgb(244, 91, 65);
+
+
+}
+.portfolio .row {
+  margin-top: -3cm;
+}
+
+
+
+.portfolio .row .thumbnail .alert-info {
+  text-transform: uppercase;
+  font-size:50px;
+  /*border: 2px solid black;*/
+}
+
+.portfolio p{
+  color: steelblue;
+}
+
+.portfolio .row .thumbnail{
+  background: transparent;
+}
+
+.portfolio .row .back_img_1{
+  background: url('../images/school.png');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.portfolio .row .back_img_2{
+  background: url('../images/roads.jpg');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.portfolio .row .back_color{
+  background-color: rgba(0,0,0,0.7);
+}
+
+.portfolio .row .thumbnail .alert{
+  color: white;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .portfolio .work-holder { padding: 150px 125px; }
+
+  .portfolio .work-holder .my-work .visible-lg{
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio { 
+    padding: 50px 20px; 
+    height: 26cm;
+
+  
+  }
+  @media screen and (max-width: 480px){
+    .portfolio .visible-xs{ 
+      font-size: 40px; 
+      padding: 30px 10px;
+      text-align: center;
+      letter-spacing: 10px;
+      font-weight: 200;
+      color: #141414;
+
+
+    }
+}
+}
+/*******PROJECTS*********/
+
+.projects {
+  background-color:;
+  /*color: #1a55dd;*/
+  font-family: 'Ek Mukta', sans-serif;
+  text-align: center;
+  padding: 50px 0 30px;
+}
+.projects .visible-lg {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 1cm;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 2cm;
+  font-weight: 200;
+  color: #141414;
+}
+
+.projects .container .thumbnail {
+  margin-bottom: 2cm;
+  font-size: 20px;
+  border: 4px groove black;
+  box-shadow:none !important;
+}
+
+.projects .container .thumbnail h3{
+  font-size: 30px;
+}
+
+.back_img_3{
+  background: url('../images/internship.jpg');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.back_img_3 .back_color{
+  background-color: rgba(0,0,0,0.7);
+  padding: 20px;
+}
+
+.internship_info{
+  color: white;
+  text-align: center;
+}
+
+.int_company{
+  font-size: 30px;
+  color: white;
+}
+
+.duration{
+  font-size: 20px;
+}
+
+.int_head{
+  font-family: 'Ek Mukta', sans-serif;
+      text-align: center;
+    font-size: 60px;
+    margin-top: 3cm;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 1cm;
+    font-weight: 200;
+    color: #141414;
+}
+
+.int_title{
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+.int_mentor{
+  font-size: 25px;
+}
+
+.int_text{
+  font-size: 20px;
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .projects  { /*padding: 170px 15px;*/ }
+
+  .portfolio .work-holder .my-work .visible-lg{
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .projects {
+        margin-top: 90px; 
+    padding: 20px 20px; 
+    height: 48cm;
+  
+  }
+  @media screen and (max-width: 480px){
+    .projects .visible-xs { 
+      font-size: 40px; 
+      margin-top: 2cm;
+      text-align: center;
+  letter-spacing: 10px;
+  font-weight: 200;
+  color: #141414;
+    }
+  }
+}
+
+
+/****INTERNSHIP*****/
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .internship_info{
+      padding: 20px;
+}
+}
+
+@media screen and (max-width: 767px) {
+  
+ .internship {
+        margin-top: 90px; 
+    padding: 20px 20px;
+
+    /*height: 48cm;*/
+  
+  }
+
+  .int_head{
+    margin-top: 2cm;
+    font-size: 40px;
+    margin-bottom: 1cm;
+  }
+}
+
+
+
+
+
+
+/*****CONTACT*****/
+.contact {
+  padding: 50px 0 100px;
+}
+.contact .follow-holder {
+  text-align: center;
+  padding: 50px 0 30px;
+}
+.contact .follow-holder h2 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 200;
+  font-family: 'Ek Mukta', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: #141414;
+}
+.contact .main-social-holder {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 0 100px;
+}
+.contact .main-social-holder .social-holder {
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.contact .main-social-holder .social-holder .front,
+.contact .main-social-holder .social-holder .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 900ms;
+}
+.contact .main-social-holder .social-holder .back { transform: rotateY(-180deg); }
+.contact .main-social-holder .social-holder:hover .front { transform: rotateY(-180deg); }
+.contact .main-social-holder .social-holder:hover .back { transform: rotateY(0); }
+.contact .main-social-holder .social-holder .img-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+.contact .main-social-holder .social-holder .img-holder.fb {
+background-color: #3b5998; }
+.contact .main-social-holder .social-holder .img-holder.twt { background-color: #1da0f2; }
+.contact .main-social-holder .social-holder .img-holder.ig { background-color: royalblue; }
+.contact .main-social-holder .social-holder .img-holder.gp { background-color: #da5636; }
+.contact .main-social-holder .social-holder .img-holder.gh { background-color: #000000; }
+.contact .main-social-holder .social-holder .img-holder img {
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+}
+.contact .main-social-holder .social-holder .text-holder {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+.contact .main-social-holder .social-holder .text-holder a {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: 'Ek Mukta', sans-serif;
+  color: #ffffff;
+}
+.contact hr {
+  margin-top: -20px;
+  margin-bottom: 50px;
+  border: 0;
+  border-top: 1px dashed #999;
+  width: 50%;
+}
+.contact .message-me-holder .text-holder {
+  margin-top: -30px;
+  padding-top: 25px;
+}
+.contact .message-me-holder .text-holder h3 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: 'Ek Mukta', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #141414;
+}
+.contact .message-me-holder .form-holder { padding: 50px 250px; }
+.contact .message-me-holder .form-holder label {
+  padding-bottom: 5px;
+  font-size: 25px;
+  font-weight: 300;
+  font-family: 'Ek Mukta', sans-serif;
+  color: #2c3e50;
+}
+.contact .message-me-holder .form-holder .name-holder ,
+.contact .message-me-holder .form-holder .email-holder { padding-bottom: 20px; }
+.contact .message-me-holder .form-holder .name-holder .name-con,
+.contact .message-me-holder .form-holder .email-holder .email-con,
+.contact .message-me-holder .form-holder .msg-holder .msg-con {
+  border-color: #95a5a6;
+  border-width: 1px;
+  transition: border-width .6s ease,
+              border-color .4s ease;
+}
+.contact .message-me-holder .form-holder .name-holder .name-con:hover,
+.contact .message-me-holder .form-holder .email-holder .email-con:hover,
+.contact .message-me-holder .form-holder .msg-holder .msg-con:hover {
+  border-color: #424242;
+  border-width: 1px;
+}
+.contact .message-me-holder .form-holder .msg-holder .msg-con { height: 200px; }
+.contact .message-me-holder .form-holder .msg-holder .noresize { resize: none; }
+.contact .message-me-holder .form-holder .send-btn {
+  position: relative;
+  right: 15px;
+  margin-top: 25px;
+  float: right;
+  width: 130px;
+  height: 45px;
+  border: 1px solid #95a5a6;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: 'Ek Mukta', sans-serif;
+  background-color: transparent;
+  transition: font-weight .4s,
+              border-color .2s ease,
+              background-color .6s ease,
+              color .4s ease;
+}
+.contact .message-me-holder .form-holder .send-btn:hover {
+  font-weight: 500;
+  border-color: #ecf0f1;
+  background-color: #2b2b2b;
+  color: #ecf0f1;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contact .message-me-holder .form-holder { padding: 50px 125px; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .contact .message-me-holder .form-holder { padding: 50px; }
+}
+@media screen and (max-width: 767px) {
+  .contact .message-me-holder .form-holder { padding: 50px 20px; }
+  @media screen and (max-width: 480px){
+    .contact .follow-holder h2 { font-size: 40px; }
+    .contact .message-me-holder .text-holder h3 { font-size: 20px; }
+    .contact .message-me-holder .form-holder label { font-size: 20px; }
+	}
+}
+/*****FOOTER*****/
+footer {
+  background: linear-gradient( rgba(0,0,0,.8), rgba(0,0,0,.8) ), url(../images/bghead.jpg);
+  background-position: 0 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .copyright-holder {
+  text-align: center;
+  padding: 45px;
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: 'Ek Mukta', sans-serif;
+  color: #fff;
+}
